@@ -1,29 +1,29 @@
 import React from 'react';
+import $ from 'jquery';
 
 export default function Card(props) {
+  const allCards = $('.card-holder').children();
+
   function handleMouseEnter(e) {
-    e.preventDefault();
-    if (e.target.className === 'card') {
-      let cardHolderChildrens = e.target.parentElement.children;
-      for (let i = props.pos + 1; i < cardHolderChildrens.length; i++) {
-        cardHolderChildrens.item(i).style.transform = 'translateX(10rem)';
-      }
-    }
+    $(allCards[props.pos])
+      .nextAll()
+      .each(function () {
+        $(this).css('transform', 'translateX(10rem)');
+      });
   }
   function handleMouseLeave(e) {
-    e.preventDefault();
-    if (e.target.className === 'card') {
-      let cardHolderChildrens = e.target.parentElement.children;
-      for (let i = props.pos; i < cardHolderChildrens.length; i++) {
-        cardHolderChildrens.item(i).style.transform = '';
-      }
-    }
+    $(allCards[props.pos])
+      .nextAll()
+      .each(function () {
+        $(this).css('transform', '');
+      });
   }
+
   return (
     <div
       className="card"
       onMouseOver={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseOut={handleMouseLeave}
     >
       <div className="card-upper">
         <p>

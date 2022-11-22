@@ -8,68 +8,69 @@ export default function SectionRight() {
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
     {
       date: 'Oct 20, 2022',
       heading: 'Responsive Animations for Every Screen Size and Device',
       tags: ['animation', 'canvas', 'flip', 'gsap', 'svg animation'],
       picture: './pngegg.png',
-      name: 'cassie evans',
+      name: 'bitnagar',
     },
   ];
   const Cards = data.map((item, key) => {
     return <Card key={key} pos={key} data={item} />;
   });
+
   return (
     <section id="section-right">
       <div className="card-holder">{Cards}</div>
