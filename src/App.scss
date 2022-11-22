@@ -106,7 +106,7 @@ body {
             z-index: 1;
 
             color: white;
-            background-color: $bg-card;
+            background: $bg-card;
 
             &:not(:first-of-type) {
               -webkit-box-shadow: -114px 2px 83px -78px rgba(0, 0, 0, 0.75);
@@ -131,23 +131,28 @@ body {
                 color: $card-date;
               }
 
-              & h1 {
+              & a {
                 font-family: 'Alexandria', sans-serif;
                 font-size: 1.4rem;
                 font-weight: 600;
+                color: inherit;
+                text-decoration: none;
+
+                &:hover {
+                  color: $card-heading-hover;
+                }
               }
 
-              & .tags {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-              }
-
-              & .tag {
+              & #tag {
                 font-family: 'Alexandria', sans-serif;
                 font-size: 0.8rem;
                 font-weight: 700;
-                color: orange;
+                color: $card-tags;
+                cursor: pointer;
+
+                &:hover {
+                  color: $card-tags-hover;
+                }
 
                 &:not(:first-of-type) {
                   margin-left: 0.5rem;
@@ -161,8 +166,13 @@ body {
               gap: 1rem;
               align-items: center;
 
-              & p {
-                font-size: 1.1rem;
+              & a {
+                font-size: 1.2rem;
+                color: inherit;
+                text-decoration: none;
+                &:hover {
+                  color: $card-heading-hover;
+                }
               }
             }
           }

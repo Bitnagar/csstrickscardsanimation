@@ -2,9 +2,9 @@ import React from 'react';
 import $ from 'jquery';
 
 export default function Card(props) {
-  const allCards = $('.card-holder').children();
-
   function handleMouseEnter(e) {
+    const allCards = $('.card-holder').children();
+    e.preventDefault();
     $(allCards[props.pos])
       .nextAll()
       .each(function () {
@@ -12,6 +12,8 @@ export default function Card(props) {
       });
   }
   function handleMouseLeave(e) {
+    const allCards = $('.card-holder').children();
+    e.preventDefault();
     $(allCards[props.pos])
       .nextAll()
       .each(function () {
@@ -20,7 +22,7 @@ export default function Card(props) {
   }
 
   return (
-    <div
+    <article
       className="card"
       onMouseOver={handleMouseEnter}
       onMouseOut={handleMouseLeave}
@@ -29,17 +31,30 @@ export default function Card(props) {
         <p>
           <b>Article</b> <span>on {props.data.date}</span>
         </p>
-        <h1>{props.data.heading}</h1>
-        <p className="tag">
+        <a href="https://www.example.com" target="_blank" rel="noreferrer">
+          {props.data.heading}
+        </a>
+        <div className="tags">
           {props.data.tags.map((tag) => {
-            return `${tag.toUpperCase()} `;
+            return (
+              <a
+                href="https://www.example.com"
+                target="_blank"
+                rel="noreferrer"
+                id="tag"
+              >
+                {tag.toUpperCase()}
+              </a>
+            );
           })}
-        </p>
+        </div>
       </div>
       <div className="card-lower">
         <img src={props.data.picture} alt="Profile pic" width="40" />
-        <p>{props.data.name}</p>
+        <a href="https://twitter.com/bitnagar" target="_blank" rel="noreferrer">
+          {props.data.name}
+        </a>
       </div>
-    </div>
+    </article>
   );
 }

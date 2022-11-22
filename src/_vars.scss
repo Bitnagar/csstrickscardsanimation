@@ -3,5 +3,10 @@ $DOColor: #008bcf;
 
 //app colors
 $bg-body: rgb(44, 40, 40);
-$bg-card: rgb(67, 67, 67);
+$bg-card: linear-gradient(90deg, rgb(67, 67, 67), rgb(44, 40, 40));
 $card-date: rgb(149, 149, 149);
+$card-tags: rgb(255, 136, 0);
+
+//hover colors
+$card-heading-hover: rgb(202, 202, 202);
+$card-tags-hover: rgb(166, 115, 56);
