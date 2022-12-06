@@ -1,0 +1,14 @@
+//fixed 100% w and h
+%w-h-100 {
+  width: 100%;
+  height: 100%;
+}
+
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.translate {
+  transform: translateX(10rem);
+}

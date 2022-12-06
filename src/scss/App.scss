@@ -1,0 +1,50 @@
+@import './base/util';
+@import './base/vars';
+@import './base/reset';
+@import './components/card';
+@import './components/popularCard';
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+  @extend %w-h-100;
+  font-size: 16px;
+}
+
+body {
+  @extend %w-h-100;
+  background-color: $bg-body;
+  overflow: hidden;
+}
+
+#root {
+  @extend %w-h-100;
+}
+
+#App {
+  @extend %w-h-100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  main {
+    width: 100%;
+    height: 37rem;
+    margin: 0 10rem 0 10rem;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+  }
+}
+
+#section-left {
+  width: 20rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#section-right {
+  display: flex;
+  width: 80rem;
+  height: 33rem;
+  overflow-x: scroll;
+}

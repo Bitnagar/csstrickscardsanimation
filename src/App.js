@@ -1,4 +1,4 @@
-import './App.scss';
+import './scss/App.scss';
 import Main from './Main';
 
 function App() {

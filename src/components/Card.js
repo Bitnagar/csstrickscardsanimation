@@ -8,7 +8,11 @@ export default function Card(props) {
     $(allCards[props.pos])
       .nextAll()
       .each(function () {
-        $(this).css('transform', 'translateX(10rem)');
+        if (window.innerWidth > 500) {
+          $(this).css('transform', 'translateX(10rem)');
+        } else {
+          $(this).css('transform', 'translateX(2rem)');
+        }
       });
   }
   function handleMouseLeave(e) {
@@ -35,9 +39,10 @@ export default function Card(props) {
           {props.data.heading}
         </a>
         <div className="tags">
-          {props.data.tags.map((tag) => {
+          {props.data.tags.map((tag, key) => {
             return (
               <a
+                key={key}
                 href="https://www.example.com"
                 target="_blank"
                 rel="noreferrer"
