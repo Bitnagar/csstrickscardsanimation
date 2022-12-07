@@ -2,12 +2,16 @@
   display: grid;
   grid-template-columns: repeat(10, 12rem);
   margin: 4rem 0 0 4rem;
+
+  @media screen and (max-width: $phone) {
+    margin: 4rem 0 0 2rem;
+  }
 }
 
 .card {
+  @extend %flex-col;
   width: 22rem;
   max-height: 25rem;
-  @extend %flex-col;
   padding: 1.5rem;
   border-radius: 1rem;
   justify-content: space-between;
@@ -26,7 +30,15 @@
   }
 
   &:hover {
-    transform: rotate(5deg);
+    transform: rotate(4deg);
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: 13rem;
+
+    &:not(:first-of-type):hover {
+      transform: translateY(-1rem);
+    }
   }
 }
 
@@ -36,6 +48,9 @@
 
   p {
     font-size: 1.2rem;
+    @media screen and (max-width: $tablet) {
+      font-size: 1rem;
+    }
   }
 
   span {
@@ -68,6 +83,12 @@
     &:not(:first-of-type) {
       margin-left: 0.5rem;
     }
+
+    @media screen and (max-width: $tablet) {
+      &:not(:first-of-type) {
+        margin-left: 0;
+      }
+    }
   }
 }
 
@@ -76,7 +97,6 @@
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-
   a {
     font-size: 1.2rem;
     color: inherit;
@@ -84,5 +104,18 @@
     &:hover {
       color: $card-heading-hover;
     }
+  }
+
+  @media screen and (max-width: $tablet) {
+    img {
+      width: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
