@@ -6,6 +6,11 @@
   background-color: black;
   border-radius: 0.7rem;
   border: 5px solid white;
+
+  @media screen and (max-width: $phone) {
+    width: 15rem;
+    height: 29rem;
+  }
 }
 
 .popular-card-content {
