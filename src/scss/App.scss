@@ -12,6 +12,9 @@ html {
   @media screen and (max-width: $tablet) {
     font-size: 10px;
   }
+  @media screen and (max-width: $landscapeSize) and (orientation: landscape) {
+    font-size: 10px;
+  }
 }
 
 body {
