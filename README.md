@@ -11,4 +11,4 @@
 
 <br />
 
-This is just a practice project. I'm not partnering with or affiliated from CSS-Tricks directly or indirectly as of now. I just love their work and designs.
+This is just a practice project. I am not sponsored by CSS-Tricks in any sort of way.
